@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { Flex, Box, Link, Spacer, Text } from '@chakra-ui/react';
+import logo from '../assets/react.svg';
 
 const Navbar = () => {
     return (
@@ -16,7 +17,7 @@ const Navbar = () => {
             width="90vw"
         >
             <Box>
-                <Link href="#" fontSize="2rem">🧠</Link>
+                <Link href="#" fontSize="2rem"><img src={logo} alt="Logo" style={{ width: '100px', height: '100px' }} className="object-fill" /></Link>
             </Box>
 
             <Flex fontSize="1.5rem" align="center">
