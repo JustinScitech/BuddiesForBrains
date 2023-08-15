@@ -83,36 +83,34 @@ function HomePage() {
                     </Box>
                 </AnimatedBox>
                 <section id="mission">
-                    <AnimatedBox>
-                        <Box p="20" boxShadow='xl' bg={beige} borderRadius="lg" overflow='hidden' minH="25vh">
-                            <Text fontSize="2xl" fontWeight="bold" mb={4}>Our Mission</Text>
-                            <Text>Your mission statement or description here.</Text>
-                        </Box>
-                    </AnimatedBox>
+                    <Box textAlign="center" mb="8">
+                        <Text fontSize="6xl" fontWeight="bold" flex="center">
+                            Our Mission</Text>
+                    </Box>
+                    <Box p="20" boxShadow='xl' bg={beige} borderRadius="lg" overflow='hidden' minH="25vh">
+                        <Text>Your mission statement or description here.</Text>
+                    </Box>
                 </section>
                 <section id="team">
-                    <AnimatedBox>
-                        <Box p="20" boxShadow='xl' bg={green} borderRadius="lg" overflow='hidden' minH="25vh">
-                            <Text fontSize="2xl" fontWeight="bold" mb={4}>Our Team</Text>
-                            <Text>Information about your team here.</Text>
-                        </Box>
-                    </AnimatedBox>
+                    <Box textAlign="center" mb="8">
+                        <Text fontSize="6xl" fontWeight="bold" flex="center">
+                            Meet The Team!</Text>
+                    </Box>
+                    <Box p="20" boxShadow='xl' bg={green} borderRadius="lg" overflow='hidden' minH="25vh">
+                        <Text>Information about your team here.</Text>
+                    </Box>
                 </section>
                 <section id="careers">
-                    <AnimatedBox>
-                        <Box p="20" boxShadow='xl' bg={beige} borderRadius="lg" overflow='hidden' minH="25vh">
-                            <Text fontSize="2xl" fontWeight="bold" mb={4}>Careers</Text>
-                            <Text>Information about career opportunities here.</Text>
-                        </Box>
-                    </AnimatedBox>
+                    <Box p="20" boxShadow='xl' bg={beige} borderRadius="lg" overflow='hidden' minH="25vh">
+                        <Text fontSize="2xl" fontWeight="bold" mb={4}>Careers</Text>
+                        <Text>Information about career opportunities here.</Text>
+                    </Box>
                 </section>
                 <section id="donate">
-                    <AnimatedBox>
-                        <Box p="20" boxShadow='xl' bg={green} borderRadius="lg" overflow='hidden' minH="25vh">
-                            <Text fontSize="2xl" fontWeight="bold" mb={4}>Donations</Text>
-                            <Text>Information donnations.</Text>
-                        </Box>
-                    </AnimatedBox>
+                    <Box p="20" boxShadow='xl' bg={green} borderRadius="lg" overflow='hidden' minH="25vh">
+                        <Text fontSize="2xl" fontWeight="bold" mb={4}>Donations</Text>
+                        <Text>Information donnations.</Text>
+                    </Box>
                 </section>
             </SimpleGrid>
         </Container>
