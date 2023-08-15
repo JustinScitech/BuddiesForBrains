@@ -1,0 +1,13 @@
+@keyframes transformUpDown{
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animateUpDown{
+    animation: transformUpDown 2s linear infinite;
+}
