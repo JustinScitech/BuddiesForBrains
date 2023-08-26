@@ -1,6 +1,6 @@
 import React from 'react'
 import './animation.css';
-import logo from '../assets/react.svg';
+import logo from '../assets/buddiesforbrainslogo.png';
 import {
     Box,
     Container,
@@ -82,10 +82,10 @@ const Footer = () => {
                             <Box as="a" href={'#'}>
                                 Twitter
                             </Box>
-                            <Box as="a" href={'#'}>
+                            <Box as="a" href={'https://www.instagram.com/buddies4braininjuries/'}>
                                 Instagram
                             </Box>
-                            <Box as="a" href={'#'}>
+                            <Box as="a" href={'https://www.linkedin.com/company/buddies-for-brain-injuries/'}>
                                 LinkedIn
                             </Box>
                         </Stack>

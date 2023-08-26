@@ -55,7 +55,7 @@ function HomePage() {
                             <Text fontSize="6xl" fontWeight="bold" flex="center">"Buddies for Brain Injuries is the club I’ve been waiting for."</Text>
                         </Box>
                         <Box boxShadow='xl' p="20" bg={useColorModeValue('beige', 'gray.900')} borderRadius="lg" overflow='hidden' minH="25vh">
-                            <Text fontSize="2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+                            <Text fontSize="2xl">Step into our process: mentors, conquerors of brain injury challenges, step up to share their wisdom, while mentees find solace by signing up for guidance. Our adept team intricately pairs them based on experiences and preferences. The connection sparks through emails and online meetings, crafting a unique support system. In this blend of technology and empathy, we prove that solidarity conquers adversity.</Text>
                             <Image mt="8" src={logo} alt={logo} />
                         </Box>
                     </AnimatedBox>
@@ -63,22 +63,22 @@ function HomePage() {
                 <AnimatedBox >
                     <Box textAlign="center" mb="8">
                         <Text fontSize="6xl" fontWeight="bold" flex="center">
-                            Space for the different sides of you.</Text>
-                        <Text fontSize="2xl" fontWeight="light" flex="center">Effortlessly organize everything you do online — work, study, hobbies — all in one window with Spaces.</Text>
+                        “Lighting up the trail to a speedier recovery journey”</Text>
+                        <Text fontSize="2xl" fontWeight="light" flex="center">Lightning mcqueen (2006)</Text>
                     </Box>
                     <Box p="20" boxShadow='xl' bg={useColorModeValue('beige', 'gray.900')} borderRadius="lg" overflow='hidden' minH="25vh">
-                        <Text fontSize="2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+                        <Text fontSize="2xl">Connecting minds, sharing stories 🧠💚 Join us at Buddies for Brain Injuries – where resilience and empathy come together to guide each other through the journey of recovery. Peer mentorship, one story at a time.</Text>
                         <Image mt="8" src={logo} alt={logo} />
                     </Box>
                 </AnimatedBox>
                 <AnimatedBox>
                     <Box textAlign="center" mb="8">
                         <Text fontSize="6xl" fontWeight="bold" flex="center">
-                            Space for the different sides of you.</Text>
+                        “From Resilience to Renewal: Forging Connections in Brain Injury Journeys”</Text>
                         <Text fontSize="2xl" fontWeight="light" flex="center">Effortlessly organize everything you do online — work, study, hobbies — all in one window with Spaces.</Text>
                     </Box>
                     <Box boxShadow='xl' p="20" bg={useColorModeValue('beige', 'gray.900')} borderRadius="lg" overflow='hidden' minH="25vh">
-                        <Text fontSize="2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Text>
+                        <Text fontSize="2xl">Stay tuned for more to come!</Text>
                         <Image mt="8" src={logo} alt={logo} />
                     </Box>
                 </AnimatedBox>

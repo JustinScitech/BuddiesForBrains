@@ -1,9 +1,21 @@
 import React, { useRef } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import { Flex, Box, Link, Spacer, Text } from '@chakra-ui/react';
-import logo from '../assets/react.svg';
+import logo from '../assets/buddiesforbrainslogo.png';
+import { Flex, Box, Link } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
-const Navbar = () => {
+const MotionBox = motion(Box);
+
+export default function Navbar() {
+    const hoverAnimation = {
+        hover: {
+            scale: 1.1,
+            transition: {
+                duration: 0.3
+            }
+        }
+    };
+
     return (
         <Flex
             as="nav"
@@ -17,29 +29,28 @@ const Navbar = () => {
             width="90vw"
         >
             <Box>
-                <Link href="#" fontSize="2rem"><img src={logo} alt="Logo" style={{ width: '100px', height: '100px' }} className="object-fill" /></Link>
+                <Link href="#" fontSize="2rem">
+                    <img src={logo} alt="Logo" style={{ width: '100px', height: '100px' }} className="object-fill" />
+                </Link>
             </Box>
 
             <Flex fontSize="1.5rem" align="center">
-                <Box mx={4}>
+                <MotionBox mx={4} whileHover="hover" variants={hoverAnimation}>
                     <ScrollLink to="home" smooth={true} duration={500}>Home</ScrollLink>
-                </Box>
-                <Box mx={4}>
+                </MotionBox>
+                <MotionBox mx={4} whileHover="hover" variants={hoverAnimation}>
                     <ScrollLink to="mission" smooth={true} duration={500}>Our Mission</ScrollLink>
-                </Box>
-                <Box mx={4}>
+                </MotionBox>
+                <MotionBox mx={4} whileHover="hover" variants={hoverAnimation}>
                     <ScrollLink to="team" smooth={true} duration={500}>Our Team</ScrollLink>
-                </Box>
-                <Box mx={4}>
+                </MotionBox>
+                <MotionBox mx={4} whileHover="hover" variants={hoverAnimation}>
                     <ScrollLink to="careers" smooth={true} duration={500}>Careers</ScrollLink>
-                </Box>
-                <Box mx={4}>
+                </MotionBox>
+                <MotionBox mx={4} whileHover="hover" variants={hoverAnimation}>
                     <ScrollLink to="donate" smooth={true} duration={500}>Donate</ScrollLink>
-                </Box>
+                </MotionBox>
             </Flex>
         </Flex>
     );
 }
-
-
-export default Navbar;
