@@ -10,13 +10,19 @@ import {
     Spacer,
     useColorModeValue,
 } from '@chakra-ui/react';
-import { useSpring, animated } from 'react-spring';
+
+import { motion } from 'framer-motion';
 
 function AnimatedBox({ children, initialVisible = false }) {
-    const [scrollY, setScrollY] = useState(0);
     const boxRef = useRef(null);
+    const [isVisible, setIsVisible] = useState(initialVisible);
+
     const handleScroll = () => {
-        setScrollY(window.scrollY);
+        let boxTop = boxRef.current ? boxRef.current.offsetTop : 0;
+        let difference = window.innerHeight + window.scrollY - boxTop;
+        if (difference > 0 && difference < window.innerHeight) {
+            setIsVisible(true);
+        }
     };
 
     useEffect(() => {
@@ -24,20 +30,20 @@ function AnimatedBox({ children, initialVisible = false }) {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    let boxTop = boxRef.current ? boxRef.current.offsetTop : 0;
-    let difference = window.innerHeight + scrollY - boxTop;
-
-    const { opacity, scale } = useSpring({
-        opacity: difference > 0 && difference < window.innerHeight
-            ? 1 - (0.5 * (scrollY / boxTop))
-            : initialVisible && scrollY < boxTop ? 1 : 0,
-        scale: difference > 0 && difference < window.innerHeight ? 1 : 0.8,
-    });
+    const fadeIn = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.7, ease: [0.6, -0.05, 0.01, 0.99] } }
+    };
 
     return (
-        <animated.div ref={boxRef} style={{ opacity, scale }}>
+        <motion.div
+            ref={boxRef}
+            initial={initialVisible ? "visible" : "hidden"}
+            animate={isVisible ? "visible" : "hidden"}
+            variants={fadeIn}
+        >
             {children}
-        </animated.div>
+        </motion.div>
     );
 }
 
@@ -45,7 +51,23 @@ function AnimatedBox({ children, initialVisible = false }) {
 
 function HomePage() {
     const beige = useColorModeValue('beige', 'gray.900');
-    const green = useColorModeValue('green', 'gray.700'); // Change this if you have a dark mode green color
+    const green = useColorModeValue('green', 'gray.700'); 
+    const fadeIn = {
+        hidden: { opacity: 0 },
+        visible: { opacity: 1, transition: { duration: 1 } }
+    };
+    const slideInFromLeft = {
+        hidden: { opacity: 0, x: '-100vw' },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
+    };
+    
+    
+
+    const iconHover = {
+        hover: { scale: 1.2, transition: { type: "spring", duration: 0.3, stiffness: 400, damping: 10} }
+      
+    };
+    
     return (
         <Container centerContent mt="20" maxW="full">
             <SimpleGrid columns={[1]} spacing={10} width="full" align="center" justify="space-between" justifyContent="center">
@@ -83,23 +105,41 @@ function HomePage() {
                     </Box>
                 </AnimatedBox>
                 <section id="mission">
-                    <Box textAlign="center" mb="8">
-                        <Text fontSize="6xl" fontWeight="bold" flex="center">
-                            Our Mission</Text>
-                    </Box>
-                    <Box p="20" boxShadow='xl' bg={beige} borderRadius="lg" overflow='hidden' minH="25vh">
-                        <Text>Your mission statement or description here.</Text>
-                    </Box>
-                </section>
-                <section id="team">
-                    <Box textAlign="center" mb="8">
-                        <Text fontSize="6xl" fontWeight="bold" flex="center">
-                            Meet The Team!</Text>
-                    </Box>
-                    <Box p="20" boxShadow='xl' bg={green} borderRadius="lg" overflow='hidden' minH="25vh">
-                        <Text>Information about your team here.</Text>
-                    </Box>
-                </section>
+    <motion.div initial="hidden" animate="visible" variants={fadeIn}>
+        <Box textAlign="center" mb="8">
+            <Text fontSize="6xl" fontWeight="bold">Our Mission</Text>
+        </Box>
+        <Box boxShadow='xl' bg={beige} borderRadius="lg" overflow='hidden' minH="25vh">
+        <Text fontSize="2xl" fontWeight="light" flex="center">At our organization, we've woven a tapestry of resilience and empathy, connecting individuals who've triumphed over brain injuries with those currently navigating similar challenges. Through our peer mentorship program, we create a dynamic bridge where stories, experiences, and triumphs flow freely. Imagine a virtual space where understanding and inspiration coalesce, fostering genuine connections that light up the path to recovery. Whether it's a shared journey of perseverance or a beacon of hope in times of uncertainty, our organization thrives on the power of human connection, reminding us that we're never alone in the battle against brain injuries.</Text>
+        </Box>
+    </motion.div>
+</section>
+
+<section id="team">
+    <motion.div initial="hidden" animate="visible" variants={fadeIn}>
+        <Box textAlign="center" mb="8">
+            <Text fontSize="6xl" fontWeight="bold">Meet The Team!</Text>
+        </Box>
+        <Box p="20" boxShadow='xl' bg={green} borderRadius="lg" overflow='hidden' minH="25vh">
+            <Text>Information about your team here.</Text>
+            <SimpleGrid columns={4} spacing={10}>
+                {Array(4).fill().map((_, index) => (
+                    <motion.div key={index} variants={slideInFromLeft} initial="hidden" animate="visible">
+                        <Box mb="4">
+                            <Text>Information about team member {index + 1}.</Text>
+                        </Box>
+                        <motion.div whileHover="hover" variants={iconHover}>
+                            {/* Replace `icon` with your actual icons */}
+                            <Box as={'icon' + (index + 1)} w="50px" h="50px" m="auto" /> 
+                            <Image mt="8" src={logo} alt={logo} />
+                        </motion.div>
+                    </motion.div>
+                ))}
+            </SimpleGrid>
+        </Box>
+    </motion.div>
+</section>
+
                 <section id="careers">
                     <Box p="20" boxShadow='xl' bg={beige} borderRadius="lg" overflow='hidden' minH="25vh">
                         <Text fontSize="2xl" fontWeight="bold" mb={4}>Careers</Text>
