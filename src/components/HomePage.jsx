@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import logo from '../assets/react.svg';
 import { FaSmile } from "react-icons/fa";
+import BFBIAlpha from "../assets/BuddiesForBrainInjuriesAlphaHealthSciences.jpg"
+import BFBImage2 from "../assets/HomePageImg2.jpg";
+import BFBImage3 from "../assets/HomePageImg3.jpg";
+
 import {
     Link,
     Box,
@@ -10,7 +14,8 @@ import {
     Image,
     Spacer,
     useColorModeValue,
-    Flex
+    Flex,
+    Button
 } from '@chakra-ui/react';
 
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -89,128 +94,105 @@ function HomePage() {
         center: { y: "0%", opacity: 1, transition: { ease: "backOut", duration: 0.5 } },
         exit: { y: "-100%", opacity: 0, transition: { ease: "backIn", duration: 0.35 } }
     };
-    
-    
+
+    const imageSources = [
+        BFBIAlpha,
+        BFBImage2,
+        BFBImage3,
+      ];
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+          setCurrentImageIndex((currentImageIndex) => (currentImageIndex + 1) % imageSources.length);
+        }, 5000);
+        return () => clearInterval(intervalId);
+      }, []);
+
     return (
-        <Container centerContent mt="20" maxW="full">
-            <SimpleGrid columns={[1]} spacing={10} width="full" align="center" justify="space-between" justifyContent="center">
-                <section id="home">
-                    <AnimatedBox>
-                        <Box textAlign="center" mb="8">
-                            <Text fontSize="6xl" fontWeight="bold" flex="center">"Buddies for Brain Injuries is the club I’ve been waiting for."</Text>
-                        </Box>
-                        <Box boxShadow='xl' p="20" bg={useColorModeValue('beige', 'gray.900')} borderRadius="lg" overflow='hidden' minH="25vh">
-                            <Text fontSize="2xl">Step into our process: mentors, conquerors of brain injury challenges, step up to share their wisdom, while mentees find solace by signing up for guidance. Our adept team intricately pairs them based on experiences and preferences. The connection sparks through emails and online meetings, crafting a unique support system. In this blend of technology and empathy, we prove that solidarity conquers adversity.</Text>
-                            {/* <Image mt="8" src={logo} alt={logo} /> */}
-                        </Box>
-                    </AnimatedBox>
-                </section>
-                <AnimatedBox >
+<Container centerContent mt="20" maxW="full">
+  <SimpleGrid columns={[1]} spacing={10} width="full" justifyItems="center" alignItems="center">
+    <section id="home">
+    <AnimatedBox>
                     <Box textAlign="center" mb="8">
-                        <Text fontSize="6xl" fontWeight="bold" flex="center">
-                        “Lighting up the trail to a speedier recovery journey”</Text>
-                        <Text fontSize="2xl" fontWeight="light" flex="center">Lightning mcqueen (2006)</Text>
-                    </Box>
-                    <Box p="20" boxShadow='xl' bg={useColorModeValue('beige', 'gray.900')} borderRadius="lg" overflow='hidden' minH="25vh">
-                        <Text fontSize="2xl">Connecting minds, sharing stories 🧠💚 Join us at Buddies for Brain Injuries – where resilience and empathy come together to guide each other through the journey of recovery. Peer mentorship, one story at a time.</Text>
-                        {/* <Image mt="8" src={logo} alt={logo} /> */}
-                    </Box>
-                </AnimatedBox>
-                <AnimatedBox>
-                    <Box textAlign="center" mb="8">
-                        <Text fontSize="6xl" fontWeight="bold" flex="center">
+                        <Text fontSize="5xl" fontWeight="bold" flex="center">
                         “From Resilience to Renewal: Forging Connections in Brain Injury Journeys”</Text>
                         <Text fontSize="2xl" fontWeight="light" flex="center">Helping Those In Need.</Text>
                     </Box>
-                    <Box boxShadow='xl' p="20" bg={useColorModeValue('beige', 'gray.900')} borderRadius="lg" overflow='hidden' minH="25vh">
-                        <Text fontSize="2xl">Stay tuned for more to come!</Text>
-                        {/* <Image mt="8" src={logo} alt={logo} /> */}
+                    </AnimatedBox>
+      <Box
+        as={motion.div}
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+        p="6"
+        borderRadius="lg"
+        overflow='hidden'
+        boxShadow='xl'
+        w="100%"
+        display="flex"
+        flexDirection="row"
+        justifyContent="space-between"
+        alignItems="center" mb="8" bg={useColorModeValue('beige', 'gray.900')}
+      >
+        <Box w="50%" textAlign="left">
+        <Text fontSize="5xl" fontWeight="bold" flex="center">
+                        Our latest impact</Text>
+          <Text fontSize="2xl" fontWeight="light" textAlign="left">
+            In October last year, we partnered up with Eliana Bloomfield from Concussion Box and Dr. Charlotte Anderson from Alpha Health Services to donate concussion care packages to those currently going through concussion rehabilitation.
+          </Text>
+          <Button mt="4" colorScheme="blue" onClick={() => window.open('https://www.linkedin.com/posts/buddies-for-brain-injuries_co-founders-alexandra-wasti-and-joshua-noronha-activity-7120086825217495042-J5xb?utm_source=share&utm_medium=member_desktop', '_blank')}>
+            Learn More
+          </Button>
+        </Box>
+        <Box w="50%" display="flex" justifyContent="center" alignItems="center" maxH="500px" overflow="hidden">
+          <Image src={BFBIAlpha} alt="Our Mission Illustration" borderRadius="lg" boxShadow="xl" maxW="100%" maxH="100%" objectFit="cover" />
+        </Box>
+        
+      </Box>
+                </section>
+                <AnimatedBox>
+                    <Box textAlign="center" mb="8">
+                        <Text fontSize="6xl" fontWeight="bold" flex="center">
+                        Brain Buds</Text>
+                    </Box>
+                    <Box p="20" boxShadow='xl' bg={useColorModeValue('beige', 'gray.900')} borderRadius="lg" overflow='hidden' minH="25vh">
+                        <Text fontSize="2xl">Explore our innovative initiative dedicated to cultivating peer mentorship connections among individuals overcoming diverse brain injuries. Build lasting, meaningful relationships that contribute to rehabilitation and extend a lifetime of support. Click on "Brain Buds" to discover more!</Text>
                     </Box>
                 </AnimatedBox>
                 <section id="mission">
-    <Flex 
-        as={motion.div} 
-        initial="hidden" 
-        animate="visible" 
-        variants={fadeIn}
-        direction="row" 
-        justifyContent="space-between"
-        alignItems="stretch"
-        mb="8"
-        w="100%"
-        wrap="no-wrap"
+                <Box
+      as={motion.div}
+      initial="hidden"
+      animate="visible"
+      variants={fadeIn}
+      p="6"
+      borderRadius="lg"
+      overflow='hidden'
+      boxShadow='xl'
+      w="100%"
+      display="flex"
+      flexDirection="row"
+      justifyContent="space-between"
+      alignItems="center"
+      mb="8"
+      bg={useColorModeValue('beige', 'gray.900')}
     >
-        <Box 
-            width="45%" 
-            p="6" 
-            boxShadow='xl' 
-            bg={beige} 
-            borderRadius="lg" 
-            overflow='hidden'
-        >
-            <Text fontSize="6xl" fontWeight="bold" mb="6">Our Mission</Text>
-            <Text fontSize="2xl" fontWeight="light">
-            At our organization, we've woven a tapestry of resilience and empathy, connecting individuals who've triumphed over brain injuries with those currently navigating similar challenges. Through our peer mentorship program, we create a dynamic bridge where stories, experiences, and triumphs flow freely. Imagine a virtual space where understanding and inspiration coalesce, fostering genuine connections that light up the path to recovery. Whether it's a shared journey of perseverance or a beacon of hope in times of uncertainty, our organization thrives on the power of human connection, reminding us that we're never alone in the battle against brain injuries.
-            </Text>
-        </Box>
-        
-        <Box width="55%" display="flex" justifyContent="center" alignItems="center">
-            <Image src={"https://i.pinimg.com/originals/b4/3d/b7/b43db78f64c8e26fb580bb7f00b66222.gif"} alt="Our Mission Illustration" borderRadius="lg" boxShadow="xl" maxW="100%" />
-        </Box>
-    </Flex>
+      <Box w="50%" display="flex" justifyContent="center" alignItems="center" maxH="500px" overflow="hidden">
+        <Image src={imageSources[currentImageIndex]} alt="Our Mission Illustration" borderRadius="lg" boxShadow="xl" maxW="100%" maxH="100%" objectFit="cover" />
+      </Box>
+      <Box w="50%" textAlign="right">
+        <Text fontSize="5xl" fontWeight="bold" flex="center">
+          Our Mission
+        </Text>
+        <Text fontSize="2xl" fontWeight="light" textAlign="right">
+        At our organization, we've woven a tapestry of resilience and empathy, connecting individuals who've triumphed over brain injuries with those currently navigating similar challenges. Through our peer mentorship program, we create a dynamic bridge where stories, experiences, and triumphs flow freely. Imagine a virtual space where understanding and inspiration coalesce, fostering genuine connections that light up the path to recovery. Whether it's a shared journey of perseverance or a beacon of hope in times of uncertainty, our organization thrives on the power of human connection, reminding us that we're never alone in the battle against brain injuries.
+        </Text>
+        <Button mt="4" colorScheme="blue" onClick={() => window.open('https://www.instagram.com/buddies4braininjuries/', '_blank')}>
+          Learn More
+        </Button>
+      </Box>
+    </Box>
 </section>
-<motion.div initial="hidden" animate="visible" variants={fadeIn}>
-    <Box textAlign="center" mb="8">
-        <Text fontSize="6xl" fontWeight="bold">Testimonials</Text>
-    </Box>
-    <Box 
-        position="relative" 
-        boxShadow='xl' 
-        bg={beige} 
-        borderRadius="lg" 
-        overflow='hidden' 
-        width="190vh" 
-        height="50vh" 
-    >
-    <Box 
-        position="relative" 
-        boxShadow='xl' 
-        bg={beige} 
-        borderRadius="lg" 
-        overflow='hidden' 
-        width="40vh" 
-        height="40vh" 
-    >
-        <AnimatePresence wait>
-            <motion.div
-                key={activeTestimonialIndex}
-                initial="enter"
-                animate="center"
-                exit="exit"
-                variants={slideVariants}
-                style={{ position: "absolute", top: 0, right: 0, bottom: 0, left: 0 }}
-            >
-                <Box 
-                    display="flex" 
-                    flexDirection="column" 
-                    alignItems="center" 
-                    justifyContent="center" 
-                    height="100%" 
-                    p="4"
-                >
-                    <FaSmile size="6em" />
-                    <Text fontSize="2xl" fontWeight="bold" mt="4">
-                        {testimonials[activeTestimonialIndex].name}
-                    </Text>
-                    <Text mt="2">
-                        "{testimonials[activeTestimonialIndex].comment}"
-                    </Text>
-                </Box>
-            </motion.div>
-        </AnimatePresence>
-    </Box>
-    </Box>
-</motion.div>
 <Spacer/>
             </SimpleGrid>
         </Container>

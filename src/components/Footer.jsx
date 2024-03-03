@@ -34,59 +34,28 @@ const Footer = () => {
                         <Stack spacing={6}>
                             <Box>
                                 <img src={logo} alt="Logo" style={{ width: '100px', height: '100px' }} className="object-fill" />
-                                <Text fontSize={'sm'}>© Buddies for Brain Injuries. All rights reserved</Text>
+                                <Text fontSize={'sm'}>Buddies for Brain Injuries</Text>
                             </Box>
 
                         </Stack>
-                        <Stack align={'flex-start'}>
-                            <ListHeader>Product</ListHeader>
-                            <Box as="a" href={'#'}>
-                                Overview
-                            </Box>
-                            <Box as="a" href={'#'}>
-                                Our Mission
-                            </Box>
-                            <Box as="a" href={'#'}>
-                                Donations
-                            </Box>
+                        
+                        <Stack>
                         </Stack>
-                        <Stack align={'flex-start'}>
-                            <ListHeader>Company</ListHeader>
-                            <Box as="a" href={'#'}>
-                                About
-                            </Box>
-                            <Box as="a" href={'#'}>
-                                Careers
-                            </Box>
-                            <Box as="a" href={'#'}>
-                                Contact
-                            </Box>
-                            <Box as="a" href={'#'}>
-                                Partners
-                            </Box>
-                        </Stack>
-                        <Stack align={'flex-start'}>
-                            <ListHeader>Support</ListHeader>
-                            <Box as="a" href={'#'}>
-                                Help
-                            </Box>
-                            <Box as="a" href={'#'}>
-                                Terms of Service
-                            </Box>
+                        <Stack>
                         </Stack>
                         <Stack align={'flex-start'}>
                             <ListHeader>Follow Us</ListHeader>
-                            <Box as="a" href={'#'}>
-                                YouTube
-                            </Box>
-                            <Box as="a" href={'#'}>
-                                Twitter
-                            </Box>
                             <Box as="a" href={'https://www.instagram.com/buddies4braininjuries/'}>
                                 Instagram
                             </Box>
                             <Box as="a" href={'https://www.linkedin.com/company/buddies-for-brain-injuries/'}>
                                 LinkedIn
+                            </Box>
+                        </Stack>
+                        <Stack align={'flex-start'}>
+                            <ListHeader>Contact Us</ListHeader>
+                            <Box as="a" href={'mailto:buddies4braininjuries@gmail.com'}>
+                                Email
                             </Box>
                         </Stack>
                     </SimpleGrid>

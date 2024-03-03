@@ -6,10 +6,8 @@ import Joshua from '../assets/Execs/Joshua.jpg';
 import AlexImg from '../assets/Execs/Alex.jpg';
 import JustinImg from '../assets/Execs/justin.jpg';
 import LanaImg from '../assets/Execs/Lana.jpg';
-import ShinaImg from '../assets/Execs/Shina.jpg';
+import Fares from '../assets/Execs/fares.jpg'
 import TiffanyImg from '../assets/Execs/Tiffany.jpg';
-import ScarlettImg from '../assets/Execs/Scarlett.jpg';
-import AlinaImg from '../assets/Execs/Alina.jpg';
 // import FaresImg from '../assets/Execs/FaresQannam.jpg';
 // import ReshImg from '../assets/Execs/Resh.jpg'; 
 import AnnaSophiaImg from '../assets/Execs/Anna Sophia.jpg';
@@ -47,48 +45,20 @@ const teamMembers = [
     },
     {
       id: 5,
-      name: 'Shina Namakian',
-      role: 'Outreach Coordinator',
-      program: 'McMaster Honours Biochemistry II',
-      img: ShinaImg
-    },
-    {
-      id: 6,
       name: 'Tiffany Yu',
       role: 'Outreach Coordinator',
       program: 'Queens Health Science II',
       img: TiffanyImg
     },
     {
-      id: 7,
-      name: 'Scarlett Cleary',
-      role: 'Content Designer',
-      program: 'McMaster Computer Sciences II',
-      img: ScarlettImg
-    },
-    {
-      id: 8,
-      name: 'Alina Altinbaeva',
-      role: 'Social Engagement Coordinator',
-      program: 'McMaster Honours Biochemistry II',
-      img: AlinaImg
-    },
-    {
-      id: 9,
+      id: 6,
       name: 'Fares Qannam',
       role: 'Fundraising and Awareness Coordinator',
-      program: '',
-      // img: FaresImg
+      program: 'Honours Life Science II',
+      img: Fares
     },
     {
-      id: 10,
-      name: 'Resh',
-      role: 'Fundraising and Awareness Coordinator',
-      program: '',
-      // img: ReshImg
-    },
-    {
-      id: 11,
+      id: 7,
       name: 'Anna Sophia',
       role: 'Event Coordinator',
       program: 'McMaster Biology Physiology Research Specialization II',

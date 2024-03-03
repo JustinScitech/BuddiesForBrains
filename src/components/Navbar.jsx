@@ -32,10 +32,17 @@ export default function Navbar() {
             borderRadius="lg"
             width="90vw"
         >
-            <Box>
+            <Box fontSize="1.5rem"
+                align="center"
+                justify="center"
+                wrap="wrap"
+                >
                 <ChakraLink href="/home">
                     <img src={logo} alt="Logo" style={{ width: '100px', height: '100px' }} className="object-fill" />
                 </ChakraLink>
+                <text>
+                    Buddies For Brain Injuries
+                </text>
             </Box>
 
             <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
@@ -63,7 +70,7 @@ function NavItems({ hoverAnimation }) {
         <>
             <NavItem to="/home" text="Home" hoverAnimation={hoverAnimation} />
             <NavItem to="/teampage" text="Our Team" hoverAnimation={hoverAnimation} />
-            <NavItem to="/careers" text="Careers" hoverAnimation={hoverAnimation} />
+            <NavItem to="/careers" text="Brain Buds" hoverAnimation={hoverAnimation} />
             <NavItem to="/donate" text="Donate" hoverAnimation={hoverAnimation} />
         </>
     );
