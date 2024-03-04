@@ -60,7 +60,7 @@ const teamMembers = [
     },
     {
       id: 7,
-      name: 'Anna Sophia',
+      name: 'Anna Sophia Deaton',
       role: 'Event Coordinator',
       program: 'McMaster Biology Physiology Research Specialization II',
       img: AnnaSophiaImg
