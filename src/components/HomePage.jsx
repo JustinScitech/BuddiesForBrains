@@ -3,7 +3,7 @@ import logo from '../assets/react.svg';
 import { FaSmile } from "react-icons/fa";
 import BFBIAlpha from "../assets/BuddiesForBrainInjuriesAlphaHealthSciences.jpg"
 import BFBImage2 from "../assets/HomePageImg2.jpg";
-import BFBImage3 from "../assets/HomePageImg3.jpg";
+import BFBImage3 from "../assets/HomepageImg3.jpg";
 
 import {
     Link,
