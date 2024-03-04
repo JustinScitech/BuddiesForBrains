@@ -7,6 +7,7 @@ import AlexImg from '../assets/Execs/Alex.jpg';
 import JustinImg from '../assets/Execs/justin.jpg';
 import LanaImg from '../assets/Execs/Lana.jpg';
 import Fares from '../assets/Execs/fares.jpg'
+import AlinaImg from '../assets/Execs/Alina.jpg';
 import TiffanyImg from '../assets/Execs/Tiffany.jpg';
 // import FaresImg from '../assets/Execs/FaresQannam.jpg';
 // import ReshImg from '../assets/Execs/Resh.jpg'; 
@@ -63,6 +64,13 @@ const teamMembers = [
       role: 'Event Coordinator',
       program: 'McMaster Biology Physiology Research Specialization II',
       img: AnnaSophiaImg
+    },
+    {
+      id: 8,
+      name: 'Alina Altinbaeva',
+      role: 'Social Engagement Coordinator',
+      program: 'McMaster Honours Biochemistry II',
+      img: AlinaImg
     }
   ];
   
