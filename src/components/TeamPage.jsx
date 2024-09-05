@@ -20,56 +20,56 @@ const teamMembers = [
       id: 1,
       name: 'Joshua Noronha',
       role: 'Co-Founder',
-      program: 'McMaster Honours Kinesiology II',
+      program: 'McMaster Honours Kinesiology',
       img: Joshua
     },
     { 
       id: 2,
       name: 'Alexandra Wasti',
       role: 'Co-Founder',
-      program: 'McMaster Honours Biochemistry II',
+      program: 'McMaster Honours Biochemistry',
       img: AlexImg
     },
     {
       id: 3,
       name: 'Justin Lau',
-      role: 'Technical Lead',
-      program: 'Waterloo Computer Engineering II',
+      role: 'Software Technical Lead',
+      program: 'Waterloo Computer Engineering',
       img: JustinImg
     },
     {
       id: 4,
       name: 'Lana Atassi',
       role: 'Director of Administration',
-      program: 'McMaster Honours Biochemistry II',
+      program: 'McMaster Honours Biochemistry',
       img: LanaImg
     },
     {
       id: 5,
       name: 'Tiffany Yu',
       role: 'Outreach Coordinator',
-      program: 'Queens Health Science II',
+      program: 'Queens Health Science',
       img: TiffanyImg
     },
     {
       id: 6,
       name: 'Fares Qannam',
       role: 'Fundraising and Awareness Coordinator',
-      program: 'Honours Life Science II',
+      program: 'Honours Life Science',
       img: Fares
     },
     {
       id: 7,
       name: 'Anna Sophia Deaton',
       role: 'Event Coordinator',
-      program: 'McMaster Biology Physiology Research Specialization II',
+      program: 'McMaster Biology Physiology Research Specialization',
       img: AnnaSophiaImg
     },
     {
       id: 8,
       name: 'Alina Altinbaeva',
       role: 'Social Engagement Coordinator',
-      program: 'McMaster Honours Biochemistry II',
+      program: 'McMaster Honours Biochemistry',
       img: AlinaImg
     }
   ];

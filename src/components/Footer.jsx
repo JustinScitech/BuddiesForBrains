@@ -45,9 +45,6 @@ const Footer = () => {
                         </Stack>
                         <Stack align={'flex-start'}>
                             <ListHeader>Follow Us</ListHeader>
-                            <Box as="a" href={'https://www.instagram.com/buddies4braininjuries/'}>
-                                Instagram
-                            </Box>
                             <Box as="a" href={'https://www.linkedin.com/company/buddies-for-brain-injuries/'}>
                                 LinkedIn
                             </Box>
